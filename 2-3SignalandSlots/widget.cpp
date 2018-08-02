@@ -19,6 +19,7 @@ Widget::Widget(QWidget *parent) :
     */
 
     // 3 - Functor Notation lambdas
+    // changetText is not used here
     connect(ui->pushButtonAA,&QPushButton::clicked,[=](){
         ui->labelBB->setText("Lamdba functor notation");
     });

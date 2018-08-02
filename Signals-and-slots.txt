@@ -1,0 +1,14 @@
+Signal to Slots
+Events to event handlers
+
+String Notation
+	connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(changeText()));
+
+Function Notation
+	connect(ui->pushButton, &QPushButton::clicked, this, &MyWidget::changeText);
+
+Function Lambda Notation
+	connect(ui->pushButton, &QPuchButton::clicked, [=] {
+		ui->label->setText("Get Lost");
+	});
+
