@@ -32,35 +32,20 @@ int main(int argc, char *argv[])
 the number of elements  8
 
 i  0 "Is"
-
 i  "0"  is  "Is"
-
 i  1 "there"
-
 i  "1"  is  "there"
-
 i  2 "any"
-
 i  "2"  is  "any"
-
 i  3 "one"
-
 i  "3"  is  "one"
-
 i  4 "out"
-
 i  "4"  is  "out"
-
 i  5 "there"
-
 i  "5"  is  "there"
-
 i  6 "!!"
-
 i  "6"  is  "!!"
-
 i  7 "??"
-
 i  "7"  is  "??"
 */
 
