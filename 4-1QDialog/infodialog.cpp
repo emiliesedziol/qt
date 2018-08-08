@@ -2,7 +2,7 @@
 #include "ui_infodialog.h"
 
 InfoDialog::InfoDialog(QWidget *parent) :
-    QDialog(parent),
+    QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint),
     ui(new Ui::InfoDialog)
 {
     ui->setupUi(this);
@@ -39,4 +39,14 @@ void InfoDialog::on_okButton_clicked()
 void InfoDialog::on_cancelButton_clicked()
 {
     reject();
+}
+
+QString InfoDialog::getPosition() const
+{
+    return position;
+}
+
+QString InfoDialog::getOS() const
+{
+    return oS;
 }
