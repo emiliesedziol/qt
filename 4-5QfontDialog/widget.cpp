@@ -24,6 +24,7 @@ void Widget::on_chooseFontButton_clicked()
           // the user clicked OK and font is set to the font the user selected
           ui->label->setFont(font);
       } else {
+          // user press cancel to exit
           // the user canceled the dialog; font is set to the initial
           // value, in this case Helvetica [Cronyx], 10
           QMessageBox::information(this, "Message", "user didn't choose a font");
