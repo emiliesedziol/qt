@@ -17,9 +17,16 @@ Widget::~Widget()
 
 void Widget::on_pushButton_clicked()
 {
+    //
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"),
+                                 "/home/jana/untitled.png",
+                                 tr("Images (*.png *.xpm *.jpg)"));
+    qDebug() << "file name saved " << fileName;
+
+
     /*
      * select a list of files
-     * */
+     *
     QStringList files = QFileDialog::getOpenFileNames(
                               this,
                               "Select one or more files to open",
@@ -30,6 +37,7 @@ void Widget::on_pushButton_clicked()
     Starting D:\github\Qt\build-4-4QFileDialog-Desktop_Qt_5_10_1_MinGW_32bit-Debug\debug\4-4QFileDialog.exe...
     files selected  ("C:/src/hifi/hifi-master/interface/src/AboutUtil.cpp",
         "C:/src/hifi/hifi-master/interface/src/AndroidHelper.cpp")
+    in the window to select files, the following will allow a different file type to be looked for
      "Images (*.png *.xpm *.jpg);;Text files (*.txt);;XML files (*.xml)"
     QStringList files = QFileDialog::getOpenFileNames(
                               this,
