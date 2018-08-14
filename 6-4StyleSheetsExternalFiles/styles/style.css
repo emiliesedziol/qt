@@ -1,6 +1,6 @@
 QPushButton[text="Submit"] {
     color : white;
-    background-color: red;
+    background-color: grey;
    }
 
 QPushButton#okButton {
