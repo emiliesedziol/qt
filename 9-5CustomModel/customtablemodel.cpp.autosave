@@ -5,6 +5,7 @@
 
 CustomTableModel::CustomTableModel(QObject * parent) : QAbstractTableModel(parent)
 {
+    // Show the seconds tic by
     timer = new QTimer(this);
     timer->setInterval(1000);
     connect( timer ,&QTimer::timeout,[=](){

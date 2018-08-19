@@ -2,7 +2,7 @@
 #define CUSTOMTABLEMODEL_H
 
 #include <QAbstractTableModel>
-
+#include <QTimer>
 #include <QObject>
 
 class CustomTableModel : public QAbstractTableModel
@@ -15,6 +15,9 @@ public:
     int columnCount(const QModelIndex &parent) const;
 
     QVariant data(const QModelIndex &index, int role) const; // control the data in each cell
+
+private:
+    QTimer * timer;
 };
 
 #endif // CUSTOMTABLEMODEL_H
