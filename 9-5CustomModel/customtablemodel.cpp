@@ -5,6 +5,7 @@
 
 CustomTableModel::CustomTableModel(QObject * parent) : QAbstractTableModel(parent)
 {
+    // Show the seconds tic by
     timer = new QTimer(this);
     timer->setInterval(1000);
     connect( timer ,&QTimer::timeout,[=](){
@@ -83,5 +84,48 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const
         break;
     }
 
+    return QVariant();
+}
+
+QVariant CustomTableModel::headerData(int section, Qt::Orientation orientation, int role) const
+{
+    if (role == Qt::DisplayRole)
+    {
+        if(orientation == Qt::Horizontal)
+        {
+            switch (section)
+            {
+                case 0:
+                    return QString("First");
+                    break;
+                case 1:
+                    return QString("Second");
+                    break;
+                case 2:
+                    return QString("Third");
+                    break;
+                default:
+                    return QString("what!!");
+                    break;
+            }
+        }
+
+        if(orientation == Qt::Vertical)
+        {
+            switch (section)
+            {
+                case 0:
+                    return QString("Timer");
+                    break;
+                case 1:
+                    return QString("row 2");
+                    break;
+
+                default:
+                    return QString("what!!");
+                    break;
+            }
+        }
+    }
     return QVariant();
 }

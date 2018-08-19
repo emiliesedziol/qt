@@ -16,6 +16,8 @@ public:
 
     QVariant data(const QModelIndex &index, int role) const; // control the data in each cell
 
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const;
+
 private:
     QTimer * timer;
 };
