@@ -89,6 +89,8 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const
 
 QVariant CustomTableModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
+    // this can be used for both horizontal and vertical headings
+
     if (role == Qt::DisplayRole)
     {
         if(orientation == Qt::Horizontal)
